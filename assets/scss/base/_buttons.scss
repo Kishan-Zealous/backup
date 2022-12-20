@@ -1,0 +1,32 @@
+
+        .btn-primary {
+            @include mixin-btn;
+            background-color: $primary-color;
+
+            &:hover {
+                color: $primary-color;
+                background-color: $secondary-font-color;
+            }
+
+            @include sm{
+                @include fontStyle(1.8vw,600);
+                height: 6vw;
+            }
+        }
+
+        
+        .btn-secondary {
+            @include mixin-btn;
+            background-color: $secondary-color;
+
+            &:hover {
+                color: $primary-color;
+                background-color: $secondary-font-color;
+            }
+
+            @include sm{
+                @include fontStyle(1.8vw,600);
+                height: 6vw;
+            }
+        }
+

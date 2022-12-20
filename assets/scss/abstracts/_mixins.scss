@@ -1,0 +1,49 @@
+@mixin mixin-flex($justifyContent,$alignItems,$direction:row){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin fontStyle($fontSize:16px,$fontWeight:500,$fontFamily:$primary-font){
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+@mixin mixin-btn{
+    @include fontStyle(14px,600);
+    padding: 0.7vw;
+    border: none;
+    color: $primary-font-color;
+    letter-spacing: 0.08vw;
+    height: 2.5vw;
+    cursor: pointer;
+}
+
+
+/* Media query */
+
+@mixin xl{
+    @media (max-width: map-get($breakpoints,"xl")) {
+        @content;
+    }
+}
+
+@mixin lg{
+    @media (max-width: map-get($breakpoints,"lg")) {
+        @content;
+    }
+}
+
+@mixin md{
+    @media (max-width: map-get($breakpoints,"md")) {
+        @content;
+    }
+}
+
+@mixin sm{
+    @media (max-width: map-get($breakpoints,"sm")) {
+        @content;
+    }
+}

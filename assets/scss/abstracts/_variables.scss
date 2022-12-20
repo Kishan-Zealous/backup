@@ -1,0 +1,21 @@
+$primary-color:#099E71;
+$secondary-color:#01383C;
+$success:#F1F8F6;
+
+$primary-font-color:#fff;
+$secondary-font-color:#000;
+
+
+/* Font Style*/
+
+$primary-font:"poppins" , sans-serif;
+$secondary-font:"Playfair Display", sans-serif;
+
+/* Screen size - map*/
+
+$breakpoints:(
+    "sm":767px,
+    "md":1023px,
+    "lg":1199px,
+    "xl":1470px
+)
