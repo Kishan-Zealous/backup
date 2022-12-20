@@ -12,8 +12,57 @@
             }
         }
         &-content{
+            position: relative;
             width: 50%;
-            background-color: black;
+            height: 525px
+        }
+
+        & .info-card{
+            @include mixin-flex(space-between,center,column);
+            padding: 20px;
+            padding-bottom: 50px;
+            position: absolute;
+            max-width: 210px;
+            border-bottom: 2px solid $info;
+            background-color: $muted;
+            text-align: center;
+            &:hover{
+                border-bottom: 2px solid $primary-color;
+            }
+
+            &-img{
+                @include mixin-flex(center,center);
+                border-radius: 50%;
+                width:100px ;
+                height: 100px;
+                background-color: $info;
+
+                &:hover{
+                    background-color: $primary-color;
+                }
+            }
+
+        }
+
+        & .top-left{
+            top:-50px;
+            left: 0;
+        }
+
+        
+        & .top-right{
+            top:20px;
+            right: 0;
+        }
+
+        
+        & .bottom-left{
+            bottom:20px;
+            left: 0;
+        }
+        & .bottom-right{
+            bottom:-30px;
+            right: 0;
         }
     }
 }
