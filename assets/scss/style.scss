@@ -6,9 +6,13 @@
 /* buttons and forms*/
 
 @import "base/buttons";
+@import "base/forms";
 
 /* main content */
 
 @import "components/banner";
 @import "components/about";
-@import "components/features"
+@import "components/features";
+@import "components/accordion";
+@import "components/contact";
+@import "components/footer";

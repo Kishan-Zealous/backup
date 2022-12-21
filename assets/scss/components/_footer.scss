@@ -1,0 +1,99 @@
+footer {
+    background-color: $secondary-color;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background: url(../images/tree.png);
+        background-size: cover;
+        height: 330px;
+        width: 250px;
+        top:-150px;
+        right: 0;
+
+        @include xl{
+            top:-70px;
+            height: 200px;
+            width: 150px;
+        }
+        @include lg{
+            top:-70px;
+            height: 150px;
+            width: 90px;
+        }
+        @include md{
+            top:-70px;
+            height: 150px;
+            width: 90px;
+        }
+    }
+}
+
+.footer-content {
+    @include mixin-flex(space-between, center);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    line-height: 2.5rem;
+    color: $primary-font-color;
+    @include lg{
+        font-size: 14px;
+    }
+    @include md{
+        font-size: 12px;
+    }
+    @include sm{
+        flex-wrap: wrap;
+    }
+
+    & .links, .timing {
+        @include mixin-flex(flex-start, flex-start, column);
+        @include sm{
+            min-width: 50%;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+    }
+
+    & .timing{
+        @include sm{
+            min-width: 40%;
+        }
+    }
+
+
+    & .days{
+        border-bottom: 1px solid $primary-color;
+    }
+    & a {
+        color: $primary-font-color;
+    }
+
+    .signup {
+        @include sm{
+            align-self: flex-start;
+        }
+        
+        & form {
+            @include mixin-flex(center, space-between, column);
+            gap:2rem;
+            @include md{
+                gap:1rem;
+            }
+
+        }
+
+        
+        & input:not([type='checkbox']){
+            width: 100%;
+        }
+
+        & .btn-primary{
+            width:120px;
+            @include sm{
+                width: 50px;;
+            }
+        }
+
+    }
+}

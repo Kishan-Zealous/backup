@@ -70,14 +70,19 @@
                 font-size: 3vw;
             }
             @include sm{
+                font-size: 14px;
                 text-align: center;
-                white-space: wrap;
+                white-space: nowrap;
             }
         }
 
         & .btn-primary{
             margin-top: 3vw;
             @include fontStyle(0.8vw,600);
+            @include md{
+                font-size: 12px;
+                height: 30px;
+            }
         }
 
 

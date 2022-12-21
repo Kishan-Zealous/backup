@@ -11,6 +11,9 @@
         &-img{
             position: relative;
             width: 50%;
+            @include md{
+                width: 80%;
+            }
             & img{
                 max-width: 100%;
             }
@@ -21,11 +24,18 @@
                 bottom: 0%;
                 left: 38%;
                 right: 0%;
-                max-height: 27%;
-                max-width: 21.1%;
+                max-height: 10vh;
+                max-width: 10vh;
                 background-image: url("../images/play_logo.png");
                 background-repeat: no-repeat;
                 background-size: cover;
+                @include md{
+                    left:27vh;
+                }
+                @include sm{
+                    top:33%;
+                    left: 38%;
+                }
             }   
         }
         &-content{

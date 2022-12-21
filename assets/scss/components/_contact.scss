@@ -1,0 +1,56 @@
+.contact{
+    position: relative;
+    @include mixin-flex(center,center);
+    height: 527px;
+
+
+    @include md{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+
+    }
+    &-title{
+        position: relative;
+        @include mixin-flex(flex-end,center);
+        width: 43%;
+        height: 100%;
+        padding-right: 70px;
+        background-color: $primary-color;
+        &::after{
+            content: '';
+            position: absolute;
+            background: url("../images/awesome-home.png");
+            background-size: cover;
+            bottom: 0;
+            left: 0;
+            height: 200px;
+            width: 200px;
+            opacity: 0.3;
+        }
+        @include md{
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            padding:0 ;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        & .title-container{
+            max-width: 350px;
+            color: $primary-font-color;
+            @include md{
+                max-width: 80%;
+            }
+            & h2{
+                color: $primary-font-color;
+                margin-bottom: 30px;
+            }
+
+            & .btn-secondary{
+                margin-top: 30px;
+            }
+        }
+    }
+
+}

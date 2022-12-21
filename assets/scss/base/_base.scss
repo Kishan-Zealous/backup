@@ -19,8 +19,18 @@ h2{
     text-transform:uppercase;
 }
 
+h3{
+    font-size: 22px;
+    font-weight: 500;
+}
 .container{
     border: none;
     max-width:1170px;
     margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.active{
+    max-height: fit-content;
 }

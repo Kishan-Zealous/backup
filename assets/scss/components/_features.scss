@@ -1,20 +1,50 @@
 .feature{
     background-color: $success;
+    padding-top: 50px;
+    padding-bottom: 20px;
     
     &-card{
         @include mixin-flex(center,center);
-        height: 525px;
+        gap: 20px;
+        height: 450px;
+        @include md{
+            flex-direction: column;
+            height: auto;
+        }
         &-title{
             width: 50%;
+            @include md{
+                width: 100%;
+                text-align: center;
+                padding-bottom: 20px;
+            }
+
+            & h2{
+                @include sm{
+                    font-size: 2em;
+                }
+            }
 
             & .btn-primary{
                 margin-top: 50px;
+                height: 40px;
+                @include sm{
+                    font-size: 12px;
+                }
             }
         }
         &-content{
             position: relative;
             width: 50%;
-            height: 525px
+            min-height: 525px;
+            @include md{
+                @include mixin-flex(space-around,center);
+                width: 100%;
+            }
+
+            @include sm{
+                gap:50px;
+            }
         }
 
         & .info-card{
@@ -22,12 +52,22 @@
             padding: 20px;
             padding-bottom: 50px;
             position: absolute;
-            max-width: 210px;
+            max-width: 230px;
             border-bottom: 2px solid $info;
             background-color: $muted;
             text-align: center;
             &:hover{
                 border-bottom: 2px solid $primary-color;
+            }
+
+            @include md{
+                position: relative;
+            }
+
+            @include sm{
+                font-size: 12px;
+                width: 150px;
+                height: 200px;
             }
 
             &-img{
@@ -40,29 +80,54 @@
                 &:hover{
                     background-color: $primary-color;
                 }
+
+                @include sm{
+                    width: 80px;
+                    width: 80px;
+                }
             }
 
         }
 
+        & .top, .bottom{
+            @include mixin-flex(space-around,center,column);
+            flex-wrap: wrap;
+            gap: 20px;
+            
+        }
+
         & .top-left{
-            top:-50px;
+            top:-100px;
             left: 0;
+            @include md{
+                top:0;
+            }
+
         }
 
         
         & .top-right{
-            top:20px;
+            top:30px;
             right: 0;
+            @include md{
+                top:0;
+            }
         }
 
         
         & .bottom-left{
-            bottom:20px;
+            bottom:70px;
             left: 0;
+            @include md{
+                bottom:0;
+            }
         }
         & .bottom-right{
-            bottom:-30px;
+            bottom:-50px;
             right: 0;
+            @include md{
+                bottom:0;
+            }
         }
     }
 }

@@ -13,11 +13,10 @@
 
 @mixin mixin-btn{
     @include fontStyle(14px,600);
-    padding: 0.7vw;
+    padding: 8px;
     border: none;
     color: $primary-font-color;
     letter-spacing: 0.08vw;
-    height: 2.5vw;
     cursor: pointer;
 }
 
