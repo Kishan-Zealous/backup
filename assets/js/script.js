@@ -26,28 +26,32 @@ let accordian = [...document.getElementsByClassName("accordion-card-title")];
 
 accordian.forEach((element,index)=>{
     let arrow = element.lastElementChild;
+    let h3= arrow.previousElementSibling;
     let content = element.nextElementSibling;
-    let flag = 0
     arrow.addEventListener("click",()=>{
-        arrow.firstElementChild.classList.toggle("up");
-        arrow.firstElementChild.classList.toggle("down");
         for(let i=0;i<5;i++){
             if(index!=i){
                 accordian[i].nextElementSibling.style.maxHeight=null;
+                accordian[i].lastElementChild.firstElementChild.classList.add("down");
+                accordian[i].lastElementChild.firstElementChild.classList.remove("up");
+                accordian[i].lastElementChild.previousElementSibling.style.color="#000";
             }
         }
-        if(flag==0){
-            
+        if(!content.style.maxHeight){
+            h3.style.color="#099E71"
             content.style.maxHeight=content.scrollHeight+"px";
-            flag=1;
+            arrow.firstElementChild.classList.add("up");
+            arrow.firstElementChild.classList.remove("down");
+            flag[index]=1;
         }
         else{
+            h3.style.color="#000"
+            arrow.firstElementChild.classList.remove("up");
+            arrow.firstElementChild.classList.add("down");
             content.style.maxHeight=null;
-            flag=0;
+            flag[index]=0;
         }
-        content.classList.toggle("active")
-        console.log(content.classList)
-        
+        content.classList.toggle("active")        
     })
 
 })

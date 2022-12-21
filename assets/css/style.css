@@ -91,6 +91,7 @@ h3 {
   align-items: center;
   width: 100%;
   z-index: 10;
+  transition: all 0.5s;
 }
 .header-container-content .menu.open {
   background-color: rgba(0, 0, 0, 0.9);
@@ -146,7 +147,7 @@ h3 {
   height: 2px;
   width: 25px;
   z-index: 99;
-  transition: all 0.2s;
+  transition: all 0.5s;
 }
 .header-container-content .nav-btn::before {
   content: "";
@@ -167,7 +168,7 @@ h3 {
   width: 20px;
 }
 .header-container-content .nav-btn.open {
-  transform: rotate(720deg);
+  transform: rotate(90deg);
   background: transparent;
 }
 .header-container-content .nav-btn.open::before {
@@ -201,19 +202,34 @@ h3 {
   }
 }
 .header-container-content .dropdown-menu {
-  position: fixed;
-  width: 135px;
+  position: absolute;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  width: 155px;
+  left: -8px;
+  top: 30px;
+  background-color: #F1F8F6;
   margin: 0 auto;
   list-style: none;
   text-align: center;
-  transition: all 0.8s;
+  transition: all 1s;
+}
+@media (max-width: 1023px) {
+  .header-container-content .dropdown-menu {
+    left: -8px;
+    background-color: rgba(241, 248, 246, 0.8);
+  }
+}
+.header-container-content .dropdown-menu a {
+  color: #000;
 }
 .header-container-content .dropdown-menu.open {
   opacity: 1;
 }
 .header-container-content .dropdown-menu.close {
   opacity: 0;
-  height: 0;
+  height: -1px;
 }
 .header-container-content .btn-secondary {
   width: 150px;
@@ -280,15 +296,13 @@ h3 {
   background-color: #099E71;
 }
 .btn-primary:hover {
-  color: #099E71;
   background-color: #000;
 }
 @media (max-width: 767px) {
   .btn-primary {
     font-family: "poppins", sans-serif;
-    font-size: 1.8vw;
+    font-size: 16px;
     font-weight: 600;
-    height: 6vw;
   }
 }
 
@@ -304,15 +318,13 @@ h3 {
   background-color: #01383C;
 }
 .btn-secondary:hover {
-  color: #099E71;
   background-color: #000;
 }
 @media (max-width: 767px) {
   .btn-secondary {
     font-family: "poppins", sans-serif;
-    font-size: 1.8vw;
+    font-size: 12px;
     font-weight: 600;
-    height: 6vw;
   }
 }
 
@@ -553,8 +565,8 @@ input:checked ~ .chx::after {
 }
 @media (max-width: 767px) {
   .banner-img img {
-    width: 80%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
   }
 }
 @media (max-width: 767px) {

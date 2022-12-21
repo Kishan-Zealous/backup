@@ -4,13 +4,11 @@
             background-color: $primary-color;
 
             &:hover {
-                color: $primary-color;
                 background-color: $secondary-font-color;
             }
 
             @include sm{
-                @include fontStyle(1.8vw,600);
-                height: 6vw;
+                @include fontStyle(16px,600);
             }
         }
 
@@ -20,13 +18,12 @@
             background-color: $secondary-color;
 
             &:hover {
-                color: $primary-color;
+                
                 background-color: $secondary-font-color;
             }
 
             @include sm{
-                @include fontStyle(1.8vw,600);
-                height: 6vw;
+                @include fontStyle(12px,600);
             }
         }
 

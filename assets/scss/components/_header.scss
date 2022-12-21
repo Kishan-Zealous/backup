@@ -36,6 +36,7 @@
             @include mixin-flex(space-around, center);
             width: 100%;
             z-index: 10;
+            transition: all 0.5s;
             &.open {
                 background-color: rgba(0, 0, 0, 0.9);
                 opacity: 1;
@@ -79,7 +80,7 @@
             height: 2px;
             width: 25px;
             z-index: 99;
-            transition: all 0.20s;
+            transition: all 0.5s;
 
             &::before {
                 content: '';
@@ -103,7 +104,7 @@
 
 
             &.open {
-                transform: rotate(720deg);
+                transform: rotate(90deg);
                 background: transparent;
 
                 &::before {
@@ -143,18 +144,31 @@
         }
 
         .dropdown-menu {
-            position: fixed;
-            width: 135px;
+            position: absolute;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 5px;
+            width: 155px;
+            left: -8px;
+            top:30px;
+            background-color: $success;
             margin: 0 auto;
             list-style: none;
             text-align: center;
-            transition: all 0.8s;
+            transition: all 1s;
+            @include md{
+                left: -8px;
+                background-color: rgba($color: $success, $alpha: 0.8);
+            }
+            & a{
+                color: #000;
+            }
             &.open {
                 opacity: 1;
             }
             &.close{
                 opacity: 0;
-                height: 0;
+                height: -1px;
             }
         }
 
