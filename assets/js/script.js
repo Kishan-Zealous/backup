@@ -29,13 +29,15 @@ accordian.forEach((element,index)=>{
     let content = element.nextElementSibling;
     let flag = 0
     arrow.addEventListener("click",()=>{
+        arrow.firstElementChild.classList.toggle("up");
+        arrow.firstElementChild.classList.toggle("down");
         for(let i=0;i<5;i++){
             if(index!=i){
-                console.log(index,i)
                 accordian[i].nextElementSibling.style.maxHeight=null;
             }
         }
         if(flag==0){
+            
             content.style.maxHeight=content.scrollHeight+"px";
             flag=1;
         }

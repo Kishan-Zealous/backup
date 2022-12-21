@@ -1,39 +1,47 @@
-.accordion{
+.accordion {
     padding-top: 100px;
     padding-bottom: 50px;
 
-    &-card{
+    @include md {
+        padding-top: 25px;
+    }
+
+    &-card {
         border-bottom: 1px solid $info;
         padding-top: 20px;
         padding-bottom: 20px;
 
-        &-title{
-            @include mixin-flex(space-between,center);
-            gap:20px;
+        &-title {
+            @include mixin-flex(space-between, center);
+            gap: 20px;
             position: relative;
 
-            & h3{
-                @include sm{
+            & h3 {
+                @include sm {
                     font-size: 14px;
                 }
             }
-            & .arrow{
+
+            & .arrow {
                 border-color: $primary-color;
                 width: 15px;
                 height: 15px;
-                @include md{
-                width: 10px;
-                height: 10px;
+
+                @include md {
+                    width: 10px;
+                    height: 10px;
                 }
 
             }
         }
-        &-content{
+
+        &-content {
             max-height: 0;
             overflow: hidden;
             transition: all 0.5s;
             padding-top: 10px;
-            @include md{
+
+            @include md {
                 font-size: 12px;
             }
         }

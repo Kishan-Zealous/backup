@@ -324,6 +324,13 @@ textarea {
   border: 1px solid #099E71;
   padding: 5px;
 }
+@media (max-width: 1023px) {
+  input,
+  select,
+  textarea {
+    width: 100%;
+  }
+}
 
 input[type=checkbox] {
   position: relative;
@@ -392,6 +399,11 @@ input:checked ~ .chx::after {
   flex-wrap: wrap;
   max-width: 670px;
 }
+@media (max-width: 1023px) {
+  .contact-form .form-inputs {
+    width: 90%;
+  }
+}
 .contact-form .btn-submit {
   margin-top: 30px;
   width: 150px;
@@ -405,6 +417,11 @@ input:checked ~ .chx::after {
 }
 .contact-form .txt-input {
   width: 50%;
+}
+@media (max-width: 1023px) {
+  .contact-form .txt-input {
+    width: 100%;
+  }
 }
 .contact-form .txt-input label {
   display: block;
@@ -558,6 +575,12 @@ input:checked ~ .chx::after {
 .about {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+@media (max-width: 1023px) {
+  .about {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .about-card {
@@ -802,6 +825,11 @@ input:checked ~ .chx::after {
   padding-top: 100px;
   padding-bottom: 50px;
 }
+@media (max-width: 1023px) {
+  .accordion {
+    padding-top: 25px;
+  }
+}
 .accordion-card {
   border-bottom: 1px solid #707070;
   padding-top: 20px;
@@ -855,7 +883,6 @@ input:checked ~ .chx::after {
   .contact {
     flex-direction: column;
     height: auto;
-    width: 100%;
   }
 }
 .contact-title {
@@ -987,15 +1014,17 @@ footer::before {
     min-width: 40%;
   }
 }
-.footer-content .days {
-  border-bottom: 1px solid #099E71;
-}
 .footer-content a {
   color: #fff;
+}
+.footer-content a:hover {
+  border-bottom: 1px solid #fff;
 }
 @media (max-width: 767px) {
   .footer-content .signup {
     align-self: flex-start;
+    width: 45%;
+    font-size: 10px;
   }
 }
 .footer-content .signup form {
@@ -1013,12 +1042,18 @@ footer::before {
 .footer-content .signup input:not([type=checkbox]) {
   width: 100%;
 }
+@media (max-width: 1023px) {
+  .footer-content .signup input:not([type=checkbox]) {
+    height: 30px;
+  }
+}
 .footer-content .signup .btn-primary {
   width: 120px;
 }
 @media (max-width: 767px) {
   .footer-content .signup .btn-primary {
-    width: 50px;
+    font-size: 10px;
+    max-width: 100px;
   }
 }
 
